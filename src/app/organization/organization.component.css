@@ -33,18 +33,21 @@ button {
   background: #1F8CE9;
 }
 
-.card {
-  margin-top: 40px;
-  margin-left: 6.25%;
+
+@media (max-width: 1024px){
+  .ag-theme-balham{
+    width: 100%;
+  }
 }
 
-.card .btn {
-  color: white;
-}
-
-.card .card-img-top {
-  width: 70%;
-  height: 80%;
-  margin: 15px auto 0 auto;
-  padding: 15px;
-}
+.ag-theme-material{
+  border-radius: 30px;
+  border: 1px solid  #CACACA;
+  padding-top: 30px;
+  width: 36%; 
+  height: 700px;
+  margin: 0 auto;
+  color: #5C5C5C;
+  font-size: 15px;
+  font-family: sans-serif;
+} 
