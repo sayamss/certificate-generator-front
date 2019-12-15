@@ -1,25 +1,23 @@
 <app-navbar></app-navbar>
 
 <div class="container-fluid">
-  <div class="row details-wrapper">
-    <div class="col">
+  <div class="row details-wrapper shadow">
+    <div class="col-sm-4 detail-div1 ">
       <h1 class="org-title"> @JBossOutreach </h1>
       <h4> Mentor @ JBoss </h4>
       <h4> Mumbai, IN </h4>
     </div>
-    <div class="col rtl" >
+    
+    <div class="col-sm-4 detail-div2">
       <h1 class="org-title"> Certificates: {{ this.rowData.length }} </h1>
       <h4> Download </h4>
     </div>
-    <div class="container-fluid">
-      <div class="row action-wrapper">
-        <div class="col-2"></div>
-        <button class="col-lg-3"> IMPORT </button>
-        <div class="col-2"></div>
-        <button type="button" routerLink="/issue/single" class="col-lg-3 blue-btn"> GENERATE </button>
-        <div class="col-2"></div>
-      </div>
+    <div class="col-sm-4 detail-div2">
+        <button class="col btn1"> IMPORT </button>
+        <button type="button" routerLink="/issue/single" class="col btn1"> GENERATE </button>
     </div>
+
+    
   </div>
   <h2 class="text-center org-title"><i class="fa fa-calendar"></i>&nbsp;&nbsp; Events: </h2>
   <div class="container">

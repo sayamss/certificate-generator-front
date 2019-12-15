@@ -11,6 +11,9 @@ export class OrganizationService {
 
   constructor(private http: HttpClient) { }
 
+  onFileSelected(event){
+    console.log("hello");
+  }
   getCertificates(): Observable<Certificate[]> {
     const token = 'JWT ' + localStorage.getItem('token');
     const options = {

@@ -23,6 +23,10 @@ export class OrganizationComponent implements OnInit {
 
   rowData = [];
 
+  onFileSelected(event){
+    console.log(event);
+  }
+
   ngOnInit() {
     this.orgService.getCertificates().subscribe((certificates: Certificate[]) => {
 
