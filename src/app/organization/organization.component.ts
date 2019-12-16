@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OrganizationService } from '../services/organization.service';
 import { Certificate } from '../services/certificate.model';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-organization',
@@ -23,7 +24,7 @@ export class OrganizationComponent implements OnInit {
 
   rowData = [];
 
-  onFileSelected(event){
+  handleFileInput(event){
     console.log(event);
   }
 
