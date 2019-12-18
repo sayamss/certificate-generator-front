@@ -32,6 +32,7 @@
           </div>
           <div class="modal-body">
             <input type="file" (change)="onFileSelected($event)"> 
+            <h6 *ngIf="Uploaded" style="color:green;margin:5px;">Sucessfully Uploaded</h6>
             <h6 *ngIf="Error" style="color:red;margin:5px;">Only CSV files are Allowded</h6>
           </div>
           <div class="modal-footer">

@@ -27,6 +27,7 @@ export class OrganizationService {
     // Would be used when organization wants to generate single certificate
   }
 
+  // Would be used when organization wants to many certificates by using csv/excel file
   generateBulkCertificate(file:File){
     const form = new FormData();
     form.append('file',file);
@@ -37,6 +38,6 @@ export class OrganizationService {
     };  
 
     return this.http.post(Environment.baseUrl+"api/issue_certificate/csv/",form,options);
-    // Would be used when organization wants to many certificates by using csv/excel file
+    
   }
 }

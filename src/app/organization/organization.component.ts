@@ -22,14 +22,16 @@ export class OrganizationComponent implements OnInit {
   ];
 
   rowData = [];
-
+  
   Error = false;
   selectedFile:File = null;
+  Uploaded = false;
 
+  // Check for Valid File type
   onFileSelected(event){
 
     this.selectedFile = <File>event.target.files[0];
-    if(this.selectedFile.type != "text/csv"){
+    if(this.selectedFile.type != "text/csv" && this.selectedFile.type != "application/vnd.ms-excel"){
       this.Error = true;
     }
     else{
@@ -37,13 +39,13 @@ export class OrganizationComponent implements OnInit {
     }  
   }
 
+  // On Upload
   onUpload(){  
     this.orgService.generateBulkCertificate(this.selectedFile).subscribe(event => {
-      console.log(event); 
+      this.Uploaded = true;
     },
     error => {
       console.log("error: ", error); 
-      alert("Something Went Wrong, Please reupload");
     }
     )
   }
