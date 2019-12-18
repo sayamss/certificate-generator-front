@@ -37,3 +37,72 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+
+<app-navbar></app-navbar>
+
+<div class="container-fluid">
+  <div class="row details-wrapper shadow">
+    <div class="col-sm-4 detail-div1 ">
+      <h1 class="org-title"> @JBossOutreach </h1>
+      <h4> Mentor @ JBoss </h4>
+      <h4> Mumbai, IN </h4>
+    </div>
+    
+    <div class="col-sm-4 detail-div2">
+      <h1 class="org-title"> Certificates: {{ this.rowData.length }} </h1>
+      <h4> Download </h4>
+    </div>
+    
+    <div class="col-sm-4 detail-div2">
+        <div class="form-group">
+            <button class="col btn1" data-toggle="modal" data-target="#staticBackdrop"> IMPORT </button>
+        </div>
+        <button type="button" routerLink="/issue/single" class="col btn1"> GENERATE </button>
+    </div>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">UPLOAD THE CSV FILE</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <h2 class="text-center org-title"><i class="fa fa-calendar"></i>&nbsp;&nbsp; Events: </h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 card">
+        <img class="card-img-top" src="https://codein.withgoogle.com/static/img/og-image.png" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title title">Google Code-In</h4>
+          <p class="card-text">Certificates: 6590 </p>
+          <a href="#" class="btn btn-danger">See certificates</a>
+        </div>
+      </div>
+      <div class="col-md-3 card">
+        <img class="card-img-top" src="https://cdn-images-1.medium.com/max/1200/1*z__mBuA-_5LAzNo0dr0gCQ.png" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title title">Summer of Code </h4>
+          <p class="card-text">Certificates: 3 </p>
+          <a href="#" class="btn btn-danger">See certificates</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { OrganizationService } from '../services/organization.service';
 import { Certificate } from '../services/certificate.model';
 
-
 @Component({
   selector: 'app-organization',
   templateUrl: './organization.component.html',
@@ -24,8 +23,29 @@ export class OrganizationComponent implements OnInit {
 
   rowData = [];
 
-  handleFileInput(event){
-    console.log(event);
+  Error = false;
+  selectedFile:File = null;
+
+  onFileSelected(event){
+
+    this.selectedFile = <File>event.target.files[0];
+    if(this.selectedFile.type != "text/csv"){
+      this.Error = true;
+    }
+    else{
+      this.Error = false;
+    }  
+  }
+
+  onUpload(){  
+    this.orgService.generateBulkCertificate(this.selectedFile).subscribe(event => {
+      console.log(event); 
+    },
+    error => {
+      console.log("error: ", error); 
+      alert("Something Went Wrong, Please reupload");
+    }
+    )
   }
 
   ngOnInit() {
