@@ -55,6 +55,7 @@ export class OrganizationComponent implements OnInit {
       for (const certificate of certificates){
         this.rowData.push({ name: certificate.student.name, date: certificate.date, desc: certificate.issued_for });
       }
+      
       this.gridApi.setRowData(this.rowData);
     });
   }
